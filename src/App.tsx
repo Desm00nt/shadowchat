@@ -39,7 +39,7 @@ export function App() {
   // Loading
   if (!isInitialized) {
     return (
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center gap-4">
+      <div className="fixed inset-0 bg-slate-950 flex flex-col items-center justify-center gap-4">
         <Loader2 className="w-8 h-8 text-indigo-500 animate-spin" />
         <div className="text-center">
           <p className="text-white font-medium">Подключение...</p>
@@ -57,7 +57,7 @@ export function App() {
   const activeContact = contacts.find(c => c.peerId === activeChat);
 
   return (
-    <div className="h-screen flex bg-slate-950 overflow-hidden">
+    <div className="h-[100dvh] flex bg-slate-950 overflow-hidden">
       {/* Call Screen Overlay */}
       <CallScreen
         callState={callState}
